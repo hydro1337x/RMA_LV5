@@ -27,8 +27,10 @@ class SBViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SBViewModel()
+        setupUI()
     }
 
+    // MARK: - Actions
     @IBAction func personButtonTapped(_ sender: UIButton) {
         guard let person = Person(rawValue: sender.tag) else { return }
         switch person {
@@ -41,6 +43,13 @@ class SBViewController: UIViewController {
         case .musk:
             viewModel.play(.musk)
         }
+    }
+    
+    // MARK: - Methods
+    private func setupUI() {
+        mamicButton.imageView?.contentMode = .scaleAspectFill
+        zuckerbergButton.imageView?.contentMode = .scaleAspectFill
+        muskButton.imageView?.contentMode = .scaleAspectFill
     }
     
 }
