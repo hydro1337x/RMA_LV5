@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SBViewController" customModule="Soundboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qmL-UO-nFB">
+                                <rect key="frame" x="100" y="144" width="214" height="618"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwF-C0-9BF">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="192.5"/>
+                                        <state key="normal" title="Button" image="mamic"/>
+                                        <connections>
+                                            <action selector="personButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4v-ji-5e1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFn-b5-RGj">
+                                        <rect key="frame" x="0.0" y="212.5" width="214" height="193"/>
+                                        <state key="normal" title="Button" image="zuckerberg"/>
+                                        <connections>
+                                            <action selector="personButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="McH-j4-Brx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8v-U7-Ykx">
+                                        <rect key="frame" x="0.0" y="425.5" width="214" height="192.5"/>
+                                        <state key="normal" title="Button" image="musk"/>
+                                        <connections>
+                                            <action selector="personButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DHs-gj-znn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qmL-UO-nFB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="PXw-AN-mTO"/>
+                            <constraint firstItem="qmL-UO-nFB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="iA5-CU-yV7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qmL-UO-nFB" secondAttribute="bottom" constant="100" id="lvS-qv-RP1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qmL-UO-nFB" secondAttribute="trailing" constant="100" id="tF3-U5-aLY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mamicButton" destination="HwF-C0-9BF" id="Muf-Yu-hKt"/>
+                        <outlet property="muskButton" destination="t8v-U7-Ykx" id="T9j-t9-hmJ"/>
+                        <outlet property="zuckerbergButton" destination="DFn-b5-RGj" id="EAu-Rc-CEL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mamic" width="1170" height="783"/>
+        <image name="musk" width="2000" height="1332"/>
+        <image name="zuckerberg" width="2000" height="1047"/>
+    </resources>
+</document>
